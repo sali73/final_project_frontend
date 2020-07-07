@@ -1,0 +1,43 @@
+
+.grid{
+    display: grid;
+    grid-template-areas:
+    " nav nav nav nav"
+    "main main main main "
+    "foot foot foot foot "
+    ;
+    grid-template-rows: 430px auto 30px;
+
+
+}
+nav {
+    grid-area: nav;
+    background-image: url(https://www.cuny.edu/wp-content/uploads/sites/4/page-assets/admissions/undergraduate-admissions/explore/brooklyn-college-banner.jpg);
+    background-repeat: no-repeat;
+    /*opacity: .8;*/
+    background-size: 100% 100%;
+}
+main{
+    grid-area:main;
+}
+footer{
+    grid-area:foot;
+}
+body{
+    margin: ;
+}
+/* Media screen size */
+/*@media screen and (min-width: 768px) {*/
+/*    button {*/
+/*        display: none;*/
+/*    }*/
+
+/*    .links {*/
+/*        height: auto;*/
+/*        display: flex;*/
+/*    }*/
+
+/*    li {*/
+/*        padding: 0 15px;*/
+/*    }*/
+/*}*/
