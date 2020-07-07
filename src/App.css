@@ -7,8 +7,6 @@
     "foot foot foot foot "
     ;
     grid-template-rows: 430px auto 30px;
-
-
 }
 nav {
     grid-area: nav;
@@ -23,21 +21,3 @@ main{
 footer{
     grid-area:foot;
 }
-body{
-    margin: ;
-}
-/* Media screen size */
-/*@media screen and (min-width: 768px) {*/
-/*    button {*/
-/*        display: none;*/
-/*    }*/
-
-/*    .links {*/
-/*        height: auto;*/
-/*        display: flex;*/
-/*    }*/
-
-/*    li {*/
-/*        padding: 0 15px;*/
-/*    }*/
-/*}*/
