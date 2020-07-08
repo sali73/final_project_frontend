@@ -47,7 +47,7 @@ const Student = (props) => {
   const classes = useStyles()
   // State to hold the Student
   const [student, setStudent] = React.useState(null);
-  // const [ setAttendance] = React.useState(null);
+  // const [attendance, setAttendance] = React.useState(null);
   // State to hold the Student the user wants to edit
   const [editStudent, setEditStudent] = React.useState({
     first_name:'',
@@ -70,24 +70,24 @@ const Student = (props) => {
     profile_pic:'',
     preferred_language:''
   }
-
+  // Hook to get the Student when the component loads
+  React.useEffect(() => {
+    getInfo();
+  }, []);
   // Get from the API
   const getInfo = async () => {
     const response = await fetch('http://127.0.0.1:8000/api/v1/Student/');
     const result = await response.json();
     setStudent(result);
-
+    //
     // const respon = await fetch('http://127.0.0.1:8000/api/v1/attendance/');
     // const results = await respon.json();
     // console.log(results);
     // setAttendance(results);
+
   };
-  // Hook to get the Student when the component loads
-  React.useEffect(() => {
-    getInfo();
-  }, [getInfo]);
   const handleCreate = async (data) => {
-     await fetch('http://127.0.0.1:8000/api/v1/Student/', {
+    await fetch('http://127.0.0.1:8000/api/v1/Student/', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -118,20 +118,18 @@ const Student = (props) => {
     // Update list of Student
     getInfo();
   };
-  //   function handleClick(e) {
-  //   e.preventDefault();
-  //   console.log('The link was clicked.');
-  //   e.currentTarget.style.backgroundColor = 'green';
-  //   var x = document.getElementById("demo").style.visibility='visible'
-  // }
-
-
+    function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+    e.currentTarget.style.backgroundColor = 'green';
+    var x = document.getElementById("demo").style.visibility='visible'
+  }
   return (
     <div className={classes.body}>
       <div>
       <Typography className={classes.header} variant="h3" >Student Records</Typography>
       <div>
-        <Typography  className={classes.formHeader} variant="h5" >Add a new student</Typography>
+        <Typography onClick={handleClick} className={classes.formHeader} variant="h5" >Add a new student</Typography>
           <div className={classes.form}>
           <Form id="demo" initial={blank} handleSubmit={handleCreate} />
         </div>
@@ -146,7 +144,7 @@ const Student = (props) => {
           {student ? student.objects.map((person) => {
               return (
                   <Card className={classes.root}>
-                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' /></CardMedia>
+                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} /></CardMedia>
                     <CardActionArea>
                         <CardContent key={person.id}>
                             <Typography gutterBottom variant="h6" component="h2" >
