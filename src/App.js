@@ -36,10 +36,8 @@ export default function BasicExample() {
       <>
           <body className='grid'>
             <nav className='navbar'>
-
             </nav>
             <main>
-
             </main>
             <footer>
             </footer>

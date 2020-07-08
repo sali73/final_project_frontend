@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import {Button, Typography ,} from "@material-ui/core"
+import { Typography ,} from "@material-ui/core"
 const useStyles = makeStyles({
   body: {
       padding: '0px 100px 40px 80px'
@@ -31,7 +31,7 @@ const Home = (props) => {
                             "Find a career that makes you happy every morning you wake up."
                         </Typography>
                         <Typography style={{display:'flex'}}  >
-                               <img style={{ width:'220px', paddingRight:'20px'}} src='https://tse2.mm.bing.net/th?id=OIP.Cnwy5E1c99f4VsFTCs4_nwHaE1&pid=Api&P=0&w=263&h=173' />
+                               <img style={{ width:'220px', paddingRight:'20px'}} src='https://tse2.mm.bing.net/th?id=OIP.Cnwy5E1c99f4VsFTCs4_nwHaE1&pid=Api&P=0&w=263&h=173' alt='page'/>
                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
                         </Typography>
                         <Typography>
@@ -39,7 +39,7 @@ const Home = (props) => {
                         </Typography>
                         <Typography style={{display:'flex'}}>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, modi, voluptatem? Alias aliquid, aperiam at autem consequatur consequuntur corporis cum cumque cupiditate deleniti error explicabo facere harum labore magni maxime minima nam natus nemo non nulla numquam officia praesentium quae quasi quia quisquam recusandae reiciendis rem tempora temporibus totam vel!</p>
-                            <img style={{ width:'240px', paddingRight:'20px'}} src='https://tse2.mm.bing.net/th?id=OIP.qreriz7qMmj7tHnqjGQoAAHaEK&pid=Api&P=0&w=303&h=171' />
+                            <img style={{ width:'240px', paddingRight:'20px'}} src='https://tse2.mm.bing.net/th?id=OIP.qreriz7qMmj7tHnqjGQoAAHaEK&pid=Api&P=0&w=303&h=171' alt='img'/>
                         </Typography>
                         <Typography>
                             <h4> Taking the time to identify your interests and skills will help you be successful and happy in your work.</h4>

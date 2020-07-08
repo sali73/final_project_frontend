@@ -47,7 +47,7 @@ const Student = (props) => {
   const classes = useStyles()
   // State to hold the Student
   const [student, setStudent] = React.useState(null);
-  const [attendance, setAttendance] = React.useState(null);
+  const [ setAttendance] = React.useState(null);
   // State to hold the Student the user wants to edit
   const [editStudent, setEditStudent] = React.useState({
     first_name:'',
@@ -87,7 +87,7 @@ const Student = (props) => {
 
   };
   const handleCreate = async (data) => {
-    const response = await fetch('http://127.0.0.1:8000/api/v1/Student/', {
+     await fetch('http://127.0.0.1:8000/api/v1/Student/', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ const Student = (props) => {
     getInfo(); // Update the list
   };
   const handleDelete = async (id) => {
-    const response = await fetch(`http://127.0.0.1:8000/api/v1/Student/${id}/`, {
+    await fetch(`http://127.0.0.1:8000/api/v1/Student/${id}/`, {
       method: "DELETE",
 
     });
@@ -107,7 +107,7 @@ const Student = (props) => {
     setEditStudent(student);
   };
   const handleEdit = async (data) => {
-    const response = await fetch(`http://127.0.0.1:8000/api/v1/Student/${data._id}/`, {
+    await fetch(`http://127.0.0.1:8000/api/v1/Student/${data._id}/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -118,12 +118,12 @@ const Student = (props) => {
     // Update list of Student
     getInfo();
   };
-    function handleClick(e) {
-    e.preventDefault();
-    console.log('The link was clicked.');
-    e.currentTarget.style.backgroundColor = 'green';
-    var x = document.getElementById("demo").style.visibility='visible'
-  }
+  //   function handleClick(e) {
+  //   e.preventDefault();
+  //   console.log('The link was clicked.');
+  //   e.currentTarget.style.backgroundColor = 'green';
+  //   var x = document.getElementById("demo").style.visibility='visible'
+  // }
 
 
   return (
@@ -131,7 +131,7 @@ const Student = (props) => {
       <div>
       <Typography className={classes.header} variant="h3" >Student Records</Typography>
       <div>
-        <Typography onClick={handleClick} className={classes.formHeader} variant="h5" >Add a new student</Typography>
+        <Typography  className={classes.formHeader} variant="h5" >Add a new student</Typography>
           <div className={classes.form}>
           <Form id="demo" initial={blank} handleSubmit={handleCreate} />
         </div>
@@ -146,7 +146,7 @@ const Student = (props) => {
           {student ? student.objects.map((person) => {
               return (
                   <Card className={classes.root}>
-                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} ></img></CardMedia>
+                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' /></CardMedia>
                     <CardActionArea>
                         <CardContent key={person.id}>
                             <Typography gutterBottom variant="h6" component="h2" >

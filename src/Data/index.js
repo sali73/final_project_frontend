@@ -43,7 +43,7 @@ const useStyles = makeStyles({
 const Data = (props) => {
   const classes = useStyles()
   const [instructor, setInstructor] = React.useState(null);
-  const [offering, setOffering] = React.useState(null);
+  // const [offering, setOffering] = React.useState(null);
   const [editInstructor, setEditInstructor] = React.useState({
     instructor_first_name :'',
     instructor_last_name:'',
@@ -74,7 +74,7 @@ const Data = (props) => {
 
   };
   const handleCreate = async (data) => {
-    const response = await fetch('http://127.0.0.1:8000/api/v1/instructor/', {
+   await fetch('http://127.0.0.1:8000/api/v1/instructor/', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ const Data = (props) => {
     getInfo(); // Update the list
   };
   const handleDelete = async (id) => {
-    const response = await fetch(`http://127.0.0.1:8000/api/v1/instructor/${id}/`, {
+    await fetch(`http://127.0.0.1:8000/api/v1/instructor/${id}/`, {
       method: "DELETE",
     });
     getInfo(); // Update the list
@@ -93,7 +93,7 @@ const Data = (props) => {
     setEditInstructor(instructor);
   };
   const handleEdit = async (data) => {
-    const response = await fetch(`http://127.0.0.1:8000/api/v1/instructor/${data._id}/`, {
+      await fetch(`http://127.0.0.1:8000/api/v1/instructor/${data._id}/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

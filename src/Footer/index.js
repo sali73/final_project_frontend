@@ -6,10 +6,10 @@ const Footer = () =>{
         <div style={{ backgroundColor:'#778054', display:"grid",paddingTop:"3vh" , gridTemplateColumns:'50% 70%' , justifyItems:'center'}} >
             <div >
                 <ul style={{listStyle:'none' , textDecoration:"none"}}>
-                    <li><a style={{color:'#303030'}}href='#'>Become a Sales Partner</a></li>
-                    <li><a style={{color:'#303030'}} href='#'> Careers </a></li>
-                    <li><a style={{color:'#303030'}} href='#'>Terms & Conditions</a></li>
-                    <li><a style={{color:'#303030'}} href='#'>Privacy Policy</a></li>
+                    <li style={{color:'#303030'}}> Become a Sales Partner</li>
+                    <li style={{color:'#303030'}}> Careers </li>
+                    <li style={{color:'#303030'}}>Terms & Conditions</li>
+                    <li style={{color:'#303030'}}>Privacy Policy</li>
                 </ul>
             </div>
             <div style={{textAlign:"center" , paddingLeft:'30px'}}>
