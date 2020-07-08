@@ -73,7 +73,7 @@ const Student = (props) => {
   // Hook to get the Student when the component loads
   React.useEffect(() => {
     getInfo();
-  }, []);
+  }, [getInfo]);
   // Get from the API
   const getInfo = async () => {
     const response = await fetch('http://127.0.0.1:8000/api/v1/Student/');
