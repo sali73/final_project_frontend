@@ -47,7 +47,7 @@ const Student = (props) => {
   const classes = useStyles()
   // State to hold the Student
   const [student, setStudent] = React.useState(null);
-  const [ setAttendance] = React.useState(null);
+  // const [ setAttendance] = React.useState(null);
   // State to hold the Student the user wants to edit
   const [editStudent, setEditStudent] = React.useState({
     first_name:'',
