@@ -70,22 +70,22 @@ const Student = (props) => {
     profile_pic:'',
     preferred_language:''
   }
-  // Hook to get the Student when the component loads
-  React.useEffect(() => {
-    getInfo();
-  }, [getInfo]);
+
   // Get from the API
   const getInfo = async () => {
     const response = await fetch('http://127.0.0.1:8000/api/v1/Student/');
     const result = await response.json();
     setStudent(result);
 
-    const respon = await fetch('http://127.0.0.1:8000/api/v1/attendance/');
-    const results = await respon.json();
-    console.log(results);
-    setAttendance(results);
-
+    // const respon = await fetch('http://127.0.0.1:8000/api/v1/attendance/');
+    // const results = await respon.json();
+    // console.log(results);
+    // setAttendance(results);
   };
+  // Hook to get the Student when the component loads
+  React.useEffect(() => {
+    getInfo();
+  }, [getInfo]);
   const handleCreate = async (data) => {
      await fetch('http://127.0.0.1:8000/api/v1/Student/', {
       method: "POST",
