@@ -11,7 +11,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Typography ,  Icon, Drawer , List , ListItem , ListItemIcon , ListItemText } from "@material-ui/core"
+import {  Drawer , List , ListItem , ListItemIcon , ListItemText } from "@material-ui/core"
 import InfoIcon from '@material-ui/icons/Info';
 import StorageIcon from '@material-ui/icons/Storage';
 import HomeWorkIcon from '@material-ui/icons/HomeWork';
