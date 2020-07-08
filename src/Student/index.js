@@ -118,18 +118,12 @@ const Student = (props) => {
     // Update list of Student
     getInfo();
   };
-    function handleClick(e) {
-    e.preventDefault();
-    console.log('The link was clicked.');
-    e.currentTarget.style.backgroundColor = 'green';
-    var x = document.getElementById("demo").style.visibility='visible'
-  }
   return (
     <div className={classes.body}>
       <div>
       <Typography className={classes.header} variant="h3" >Student Records</Typography>
       <div>
-        <Typography onClick={handleClick} className={classes.formHeader} variant="h5" >Add a new student</Typography>
+        <Typography className={classes.formHeader} variant="h5" >Add a new student</Typography>
           <div className={classes.form}>
           <Form id="demo" initial={blank} handleSubmit={handleCreate} />
         </div>
@@ -144,7 +138,7 @@ const Student = (props) => {
           {student ? student.objects.map((person) => {
               return (
                   <Card className={classes.root}>
-                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} /></CardMedia>
+                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' /></CardMedia>
                     <CardActionArea>
                         <CardContent key={person.id}>
                             <Typography gutterBottom variant="h6" component="h2" >
