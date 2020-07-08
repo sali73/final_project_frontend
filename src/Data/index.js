@@ -123,7 +123,7 @@ const Data = (props) => {
           {instructor ? instructor.objects.map((person) => {
               return (
                   <Card className={classes.root}>
-                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} /></CardMedia>
+                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic'/></CardMedia>
                     <CardActionArea>
                         <CardContent key={person.id}>
                             <Typography gutterBottom variant="h6" component="h2" >
