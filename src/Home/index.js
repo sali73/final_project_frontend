@@ -5,6 +5,23 @@ const useStyles = makeStyles({
   body: {
       padding: '0px 100px 40px 80px'
   },
+  td: {
+    border: '1px solid black',
+    borderCollapse: 'collapse',
+    padding: '15px',
+    textAlign: 'left'
+    },
+   th: {
+    border: '1px solid black',
+    borderCollapse: 'collapse',
+    padding: '15px',
+    textAlign: 'left'
+    },
+    table: {
+      width:'100%',
+      border: '1px solid black',
+      borderCollapse: 'collapse'
+      },
    flexText: {
        margin: '60px 20px',
        padding: '30px',
@@ -46,6 +63,29 @@ const Home = (props) => {
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad cum quibusdam tempora! Ab aperiam culpa cum debitis deleniti dolore dolorum ducimus exercitationem explicabo itaque laboriosam laudantium magni nesciunt nostrum, nulla officiis optio quo quos ratione repellendus, sapiente similique sint sit sunt tempore tenetur voluptatibus? A accusantium assumenda aut, commodi cumque exercitationem hic maiores maxime mollitia nobis obcaecati omnis pariatur praesentium quaerat quas quasi rerum sed, sit velit veritatis voluptas voluptates voluptatum! At consequuntur culpa cumque facilis minima modi rerum voluptates? Aliquam aperiam architecto consequuntur cumque, doloribus ducimus, eveniet exercitationem labore maxime nulla porro, possimus qui quo voluptatibus voluptatum? Accusantium alias et ipsa ipsum possimus reprehenderit sequi? Accusamus at autem blanditiis commodi consequatur cupiditate, dolores eaque, eos expedita id impedit iste magnam magni neque obcaecati odio porro praesentium quas quasi quis, quo quos ratione sequi tempora vero! Ab accusamus, animi, consequatur corporis delectus distinctio dolor dolorum eos neque nihil obcaecati officia pariatur perspiciatis quis voluptas voluptate, voluptatum. Architecto beatae consectetur consequuntur dignissimos, eaque enim, est in inventore maiores provident quam, quo sint totam unde voluptatibus. Adipisci architecto commodi culpa distinctio doloremque, dolores, eaque eius eveniet expedita explicabo iste iusto natus neque odio pariatur perferendis quaerat, quod recusandae reprehenderit vero! Nesciunt?</p>
                         </Typography>
                     </div>
+                               <h2 style={{ textAlign: 'center' , paddingTop:'40px', color: 'red'}}>OUR COURSES</h2>
+                    <table className={classes.table}>
+                         <tr style={{ backgroundColor:'black' , color:'white'}} >
+                            <th className={classes.th} >Course ID</th>
+                            <th className={classes.th} >Title</th>
+                            <th className={classes.th} >Cost</th>
+                            <th className={classes.th} >Duration</th>
+                         </tr>
+                         {course ? course.objects.map((courses) => {
+                            return (
+                                <tr>
+                                    <td className={classes.td} >{courses.course_id}</td>
+                                    <td className={classes.td} >{courses.title}</td>
+                                    <td className={classes.td} >${courses.cost}</td>
+                                    <td className={classes.td} >{courses.duration} months</td>
+                                </tr>
+
+
+                            )
+                         })
+                         : "Loading..."
+                         }
+                    </table>
             </div>
           </body>
 
