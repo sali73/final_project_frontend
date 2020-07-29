@@ -1,10 +1,11 @@
 import React from 'react';
+import '../App.css'
 const Footer = () =>{
     return(
         <>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <div style={{ backgroundColor:'#778054', display:"grid",paddingTop:"3vh" , gridTemplateColumns:'50% 70%' , justifyItems:'center'}} >
-            <div >
+        <div  style={{ backgroundColor:'#778054', display:"grid",paddingTop:"3vh" , gridTemplateColumns:'50% 70%' , justifyItems:'center'}} >
+            <div className='foot' >
                 <ul style={{listStyle:'none' , textDecoration:"none"}}>
                     <li style={{color:'#303030'}}> Become a Sales Partner</li>
                     <li style={{color:'#303030'}}> Careers </li>

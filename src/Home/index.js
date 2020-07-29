@@ -53,21 +53,21 @@ const Home = (props) => {
       return (
             <body >
                 <div className={classes.body} >
-                    <Typography className={classes.header} variant="h3" >WELCOME SAS COLLEGE </Typography>
-                    <div >
+                    <Typography className={classes.header} variant="h3" id='home' >WELCOME TO SAS COLLEGE </Typography>
+                    <div id='homeText' >
                         <Typography >
                             "Find a career that makes you happy every morning you wake up."
                         </Typography>
-                        <Typography style={{display:'flex'}}  >
-                               <img style={{ width:'220px', paddingRight:'20px'}} src='https://tse2.mm.bing.net/th?id=OIP.Cnwy5E1c99f4VsFTCs4_nwHaE1&pid=Api&P=0&w=263&h=173' />
+                        <Typography >
+                               <img style={{ width:'30%', height:'30%', paddingRight:'20px', float:'left', paddingBottom:'10px'}} src='https://tse2.mm.bing.net/th?id=OIP.Cnwy5E1c99f4VsFTCs4_nwHaE1&pid=Api&P=0&w=263&h=173' />
                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
                         </Typography>
                         <Typography>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur blanditiis cupiditate, dignissimos dolorem dolorum enim excepturi id ipsum laudantium magnam, magni maiores nisi, nulla porro quas qui quo quos ratione repellat. Ab aut consectetur corporis, cupiditate, dignissimos dolore ducimus et eveniet facere fugit harum in itaque iusto laudantium libero molestiae nihil nulla officiis pariatur quae qui quidem recusandae repellat rerum similique unde velit? Ad adipisci amet aspernatur delectus deleniti dolor dolorem dolores, ducimus earum eligendi enim eum ex harum illo incidunt ipsum iusto laborum laudantium magni molestias mollitia nesciunt numquam officiis possimus quod quos sint sit temporibus tenetur, unde.</p>
                         </Typography>
-                        <Typography style={{display:'flex'}}>
+                        <Typography >
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, modi, voluptatem? Alias aliquid, aperiam at autem consequatur consequuntur corporis cum cumque cupiditate deleniti error explicabo facere harum labore magni maxime minima nam natus nemo non nulla numquam officia praesentium quae quasi quia quisquam recusandae reiciendis rem tempora temporibus totam vel!</p>
-                            <img style={{ width:'240px', paddingRight:'20px'}} src='https://tse2.mm.bing.net/th?id=OIP.qreriz7qMmj7tHnqjGQoAAHaEK&pid=Api&P=0&w=303&h=171' />
+                            <img style={{  width:'30%', height:'30%', paddingRight:'20px', float:'right', paddingBottom:'10px'}} src='https://tse2.mm.bing.net/th?id=OIP.qreriz7qMmj7tHnqjGQoAAHaEK&pid=Api&P=0&w=303&h=171' />
                         </Typography>
                         <Typography>
                             <h4> Taking the time to identify your interests and skills will help you be successful and happy in your work.</h4>
@@ -75,29 +75,31 @@ const Home = (props) => {
                         </Typography>
 
                     </div>
-                    <h2 style={{ textAlign: 'center' , paddingTop:'40px', color: 'red'}}>OUR COURSES</h2>
-                    <table className={classes.table}>
-                         <tr style={{ backgroundColor:'black' , color:'white'}} >
-                            <th className={classes.th} >Course ID</th>
-                            <th className={classes.th} >Title</th>
-                            <th className={classes.th} >Cost</th>
-                            <th className={classes.th} >Duration</th>
-                         </tr>
-                         {course ? course.objects.map((courses) => {
-                            return (
-                                <tr>
-                                    <td className={classes.td} >{courses.course_id}</td>
-                                    <td className={classes.td} >{courses.title}</td>
-                                    <td className={classes.td} >${courses.cost}</td>
-                                    <td className={classes.td} >{courses.duration} months</td>
-                                </tr>
+                    <div > 
+                        <h2 style={{ textAlign: 'center' , paddingTop:'40px', color: 'red'}}>OUR COURSES</h2>
+                        <table className={classes.table} id='table'>
+                            <tr style={{ backgroundColor:'black' , color:'white'}} >
+                                <th className={classes.th} >Course ID</th>
+                                <th className={classes.th} >Title</th>
+                                <th className={classes.th} >Cost</th>
+                                <th className={classes.th} >Duration</th>
+                            </tr>
+                            {course ? course.objects.map((courses) => {
+                                return (
+                                    <tr>
+                                        <td className={classes.td} >{courses.course_id}</td>
+                                        <td className={classes.td} >{courses.title}</td>
+                                        <td className={classes.td} >${courses.cost}</td>
+                                        <td className={classes.td} >{courses.duration} months</td>
+                                    </tr>
 
 
-                            )
-                         })
-                         : "Loading..."
-                         }
-                    </table>
+                                )
+                            })
+                            : "Loading..."
+                            }
+                        </table>
+                    </div>
             </div>
           </body>
 

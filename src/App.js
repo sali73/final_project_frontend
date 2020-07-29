@@ -5,6 +5,8 @@ import Home from "./Home";
 import Student from "./Student"
 import Data from "./Data";
 import Footer from "./Footer";
+import "./App.css"
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +20,8 @@ import HomeWorkIcon from '@material-ui/icons/HomeWork';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
-    drawerPaper: {  width : 'inherit' ,
+    drawerPaper: { 
+        width : 'inherit' ,
         paddingTop: '40px' ,
         paddingLeft: '10px' ,
         backgroundColor: '#778054'
@@ -26,8 +29,6 @@ const useStyles = makeStyles((theme) => ({
     link: { textDecoration: 'none' ,
         color: 'white',
     },
-
-
 }));
 
 export default function BasicExample() {
@@ -45,11 +46,12 @@ export default function BasicExample() {
             <Router>
               <div style={{display: 'flex'}}>
                 <Drawer
-                  style={{ width: '210px' }}
+                  style={{ width: '13%' }}
                   variant='persistent'
                   anchor='left'
                   open={true}
-                  classes={{ paper: classes.drawerPaper }} >
+                  classes={{ paper: classes.drawerPaper }} 
+                  className='leftside'>
                     <List>
                       <Link to="/" className={classes.link}>
                       <ListItem button>

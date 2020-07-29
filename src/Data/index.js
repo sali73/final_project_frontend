@@ -106,24 +106,24 @@ const Data = (props) => {
   return (
     <div className={classes.body}>
       <div>
-      <Typography className={classes.header} variant="h3" >instructor Records</Typography>
+      <Typography className={classes.header} variant="h3" id='header' >instructor Records</Typography>
       <div>
-        <Typography  className={classes.formHeader} variant="h5" >Add a new instructor</Typography>
+        <Typography  className={classes.formHeader} variant="h5" id='text' >Add a new instructor</Typography>
           <div className={classes.form}>
               <Form  initial={blank} handleSubmit={handleCreate} />
           </div>
       </div>
       <article>
-        <Typography className={classes.formHeader} variant="h5" >Edit for currently instructor</Typography>
+        <Typography className={classes.formHeader} variant="h5" id='edit' >Edit for currently instructor</Typography>
         <Form  initial={editInstructor} handleSubmit={handleEdit} />
         </article>
       <main >
-        <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', paddingTop:'60px'}}> Currently instructor List </h1>
+        <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', paddingTop:'60px'}} id='student'> Currently instructor List </h1>
         <div className={classes.allCards}>
           {instructor ? instructor.objects.map((person) => {
               return (
-                  <Card className={classes.root}>
-                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic'/></CardMedia>
+                  <Card className={classes.root} id='cards'>
+                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' id='photoCard'/></CardMedia>
                     <CardActionArea>
                         <CardContent key={person.id}>
                             <Typography gutterBottom variant="h6" component="h2" >

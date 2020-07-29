@@ -8,6 +8,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import '../App.css'
 
 const useStyles = makeStyles({
   body: {
@@ -121,25 +122,25 @@ const Student = (props) => {
   return (
     <div className={classes.body}>
       <div>
-      <Typography className={classes.header} variant="h3" >Student Records</Typography>
+      <Typography  className={classes.header} variant="h3" id='header' >Student Records</Typography>
       <div>
-        <Typography className={classes.formHeader} variant="h5" >Add a new student</Typography>
+        <Typography className={classes.formHeader} variant="h5" id='text'>Add a new student</Typography>
           <div className={classes.form}>
-          <Form id="demo" initial={blank} handleSubmit={handleCreate} />
-        </div>
+            <Form initial={blank} handleSubmit={handleCreate} />
+          </div>
       </div>
       <article>
-        <Typography className={classes.formHeader} variant="h5" >Edit for currently student</Typography>
+        <Typography className={classes.formHeader} variant="h5" id='edit'>Edit for currently student</Typography>
         <Form  initial={editStudent} handleSubmit={handleEdit} />
         </article>
       <main >
-        <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', paddingTop:'60px'}}> Currently Student List </h1>
+        <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', paddingTop:'60px'}} id='student' > Currently Student List </h1>
         <div className={classes.allCards}>
           {student ? student.objects.map((person) => {
               return (
-                  <Card className={classes.root}>
-                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' /></CardMedia>
-                    <CardActionArea>
+                  <Card className={classes.root} id='cards'>
+                    <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' id='photoCard'/></CardMedia>
+                    <CardActionArea >
                         <CardContent key={person.id}>
                             <Typography gutterBottom variant="h6" component="h2" >
                                 Full Name: {person.first_name} {person.last_name}
