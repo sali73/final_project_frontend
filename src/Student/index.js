@@ -12,18 +12,22 @@ import '../App.css'
 
 const useStyles = makeStyles({
   body: {
-    padding: '0px 100px 40px 80px'
+    padding: '0px 100px 40px 80px',
   },
   header: {
     color: 'red',
     textAlign:'center',
     textShadow: '2px 2px',
     fontSize: '2.8em',
+    marginBottom: '40px',
+    fontFamily: 'Lato',
+    paddingTop:'70px'
   },
   formHeader:{
     color: '#3F442C' ,
     paddingTop:'60px',
-    textAlign:'center'
+    textAlign:'center',
+    fontFamily: 'Lato',
   },
   root: {
     maxWidth: 770,
@@ -33,13 +37,14 @@ const useStyles = makeStyles({
   },
   media: {
     height: 245,
-    padding:'20px'
+    padding:'20px',
   },
   cards: {
     display: "flex",
   },
   allCards: {
-    paddingLeft:'120px'
+    paddingLeft:'120px',
+    fontFamily: 'Lato',
   }
 });
 
@@ -134,7 +139,7 @@ const Student = (props) => {
         <Form  initial={editStudent} handleSubmit={handleEdit} />
         </article>
       <main >
-        <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', paddingTop:'60px'}} id='student' > Currently Student List </h1>
+        <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', fontSize:'30px' ,paddingTop:'60px',fontWeight:'bolder'}} id='student' > Currently Student List </h1>
         <div className={classes.allCards}>
           {student ? student.objects.map((person) => {
               return (
@@ -142,10 +147,10 @@ const Student = (props) => {
                     <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' id='photoCard'/></CardMedia>
                     <CardActionArea >
                         <CardContent key={person.id}>
-                            <Typography gutterBottom variant="h6" component="h2" >
+                            <Typography gutterBottom variant="h6" component="h2"  style={{fontFamily: 'Lato', fontWeight:'bolder' , fontSize:'26px'}}>
                                 Full Name: {person.first_name} {person.last_name}
                             </Typography>
-                            <Typography variant="body1" component="p">
+                            <Typography variant="body1" component="p" style={{fontFamily: 'Lato'}} >
                                 Email: {person.email}<br/>
                                 Phone Number: {person.phone}<br/>
                                 Date Of Birth: {person.dob}<br/>

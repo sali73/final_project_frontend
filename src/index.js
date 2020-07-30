@@ -6,6 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles' ;
 import theme from "./theme";
 import App from './App';
 
+
 const root = document.getElementById("root");
 let hist = createBrowserHistory();
 

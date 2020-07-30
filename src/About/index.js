@@ -3,7 +3,7 @@ import '../App.css'
 const About= (props) => {
       return (
             <div style={{padding: '0px 100px 40px 80px'}}>
-                <h1 style={{color: 'red', textAlign:'center', textShadow: '2px 2px', fontSize: '2.8em', marginBottom: '70px'}} className='about' >ABOUT US</h1>
+                <h1 style={{color: 'red', textAlign:'center', textShadow: '2px 2px', fontSize: '2.8em', marginBottom: '30px', fontFamily: 'Lato',paddingTop:'10px'}} className='about' >ABOUT US</h1>
 
                 <div style={{ marginLeft:'60px', marginBottom:'90px', width:'900px' , color:'#3F442C'}} className='about-text'>
                     <h2>Thinking about going to college?</h2>

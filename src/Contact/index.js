@@ -6,9 +6,9 @@ class Contact extends Component {
       <div className="Contact">
         <div >
         <main style={{padding: '0px 100px 40px 80px'}}>
-            <h1 style={{paddingLeft:'200px' ,color: 'red',paddingBottom:'50px', textAlign:'center', textShadow: '2px 2px', fontSize: '2.8em', }}className='about'>CONTACT US</h1>
-                <div className='about-text' style={{ marginLeft:'60px', color:'#3F442C'}}>
-                    <p style={{fontSize:'3.4vh'}}>Find us on social media by clicking on our Instagram, Facebook, or Twitter.</p>
+            <h1 style={{paddingLeft:'200px' ,color: 'red',paddingBottom:'30px', textAlign:'center', textShadow: '2px 2px', fontSize: '2.8em', fontFamily: 'Lato',paddingTop:'10px'}}className='about'>CONTACT US</h1>
+                <div className='about-text' style={{ marginLeft:'30px', color:'#3F442C'}}>
+                    <p style={{fontSize:'3.2vh'}}>Find us on social media by clicking on our Instagram, Facebook, or Twitter.</p>
 
                     <a href="https://www.twitter.com/" style={{fontSize:"4.4vh", textDecoration:"none", marginRight:"4vh"}}><i className="fa fa-twitter"></i></a>
                     <a style={{fontSize:"4.4vh",  textDecoration:"none", marginRight:"4vh"}} href="https://www.instagram.com/"><i className="fa fa-instagram"></i></a>
