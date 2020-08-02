@@ -23,7 +23,6 @@ nav {
 }
 main{
     grid-area:main;
-    font-family: 'Lato', sans-serif;
 }
 footer{
     grid-area:foot;
