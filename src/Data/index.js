@@ -72,13 +72,13 @@ const Data = (props) => {
     getInfo();
   }, []);
   const getInfo = async () => {
-    const response = await fetch('http://127.0.0.1:8000/api/v1/instructor/');
+    const response = await fetch('https://secret-reef-78372.herokuapp.com/api/v1/instructor/');
     const result = await response.json();
     setInstructor(result);
 
   };
   const handleCreate = async (data) => {
-   await fetch('http://127.0.0.1:8000/api/v1/instructor/', {
+   await fetch('https://secret-reef-78372.herokuapp.com/api/v1/instructor/', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -88,7 +88,7 @@ const Data = (props) => {
     getInfo(); // Update the list
   };
   const handleDelete = async (id) => {
-    await fetch(`http://127.0.0.1:8000/api/v1/instructor/${id}/`, {
+    await fetch(`https://secret-reef-78372.herokuapp.com/api/v1/instructor/${id}/`, {
       method: "DELETE",
     });
     getInfo(); // Update the list
@@ -97,7 +97,7 @@ const Data = (props) => {
     setEditInstructor(instructor);
   };
   const handleEdit = async (data) => {
-      await fetch(`http://127.0.0.1:8000/api/v1/instructor/${data._id}/`, {
+      await fetch(`https://secret-reef-78372.herokuapp.com/api/v1/instructor/${data._id}/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

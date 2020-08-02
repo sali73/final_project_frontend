@@ -82,14 +82,9 @@ const Student = (props) => {
   }, []);
   // Get from the API
   const getInfo = async () => {
-    const response = await fetch('http://127.0.0.1:8000/api/v1/Student/');
+    const response = await fetch('https://secret-reef-78372.herokuapp.com/api/v1/Student/');
     const result = await response.json();
     setStudent(result);
-    //
-    // const respon = await fetch('http://127.0.0.1:8000/api/v1/attendance/');
-    // const results = await respon.json();
-    // console.log(results);
-    // setAttendance(results);
 
   };
   const handleCreate = async (data) => {
@@ -103,7 +98,7 @@ const Student = (props) => {
     getInfo(); // Update the list
   };
   const handleDelete = async (id) => {
-    await fetch(`http://127.0.0.1:8000/api/v1/Student/${id}/`, {
+    await fetch(`https://secret-reef-78372.herokuapp.com/api/v1/Student/${id}/`, {
       method: "DELETE",
 
     });
@@ -113,7 +108,7 @@ const Student = (props) => {
     setEditStudent(student);
   };
   const handleEdit = async (data) => {
-    await fetch(`http://127.0.0.1:8000/api/v1/Student/${data._id}/`, {
+    await fetch(`https://secret-reef-78372.herokuapp.com/api/v1/Student/${data._id}/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

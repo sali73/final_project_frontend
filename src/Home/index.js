@@ -45,7 +45,7 @@ const Home = (props) => {
      }, []);
     // Get from the API
     const getInfo = async () => {
-        const response = await fetch('http://127.0.0.1:8000/api/v1/course/');
+        const response = await fetch('https://secret-reef-78372.herokuapp.com/api/v1/course/');
         const result = await response.json();
         setCourse(result);
      }
