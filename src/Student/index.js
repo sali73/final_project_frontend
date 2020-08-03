@@ -36,7 +36,8 @@ const useStyles = makeStyles({
     justifyContent: 'center',
   },
   media: {
-    height: 245,
+    height: '245px',
+    width:'200px',
     padding:'20px',
   },
   cards: {
