@@ -19,7 +19,7 @@ class Contact extends Component {
                     <div></div>
                       <div >
                           <div className='map' >
-                              <iframe className='mapping' style={{ width:'700px' , height:'350px'}} src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="90" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                              <iframe title="My Tracker" className='mapping' style={{ width:'700px' , height:'350px'}} src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="90" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                           </div> 
                           
                         </div>   

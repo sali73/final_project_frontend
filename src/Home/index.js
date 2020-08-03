@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import {Button, Typography ,} from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 const useStyles = makeStyles({
   body: {
       padding: '0px 100px 40px 80px'

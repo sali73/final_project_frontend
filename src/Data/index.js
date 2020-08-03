@@ -123,7 +123,7 @@ const Data = (props) => {
         <Form  initial={editInstructor} handleSubmit={handleEdit} />
         </article>
       <main >
-        <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', paddingTop:'60px',fontSize:'30px' ,paddingTop:'60px',fontWeight:'bolder'}} id='student'> Currently instructor List </h1>
+        <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center',fontSize:'30px' ,paddingTop:'60px',fontWeight:'bolder'}} id='student'> Currently instructor List </h1>
         <div className={classes.allCards}>
           {instructor ? instructor.objects.map((person) => {
               return (
