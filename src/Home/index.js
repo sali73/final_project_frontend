@@ -1,6 +1,8 @@
 import React from "react";
+import '../App.css'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from "@material-ui/core"
+
 const useStyles = makeStyles({
   body: {
       padding: '0px 100px 40px 80px'
@@ -89,8 +91,6 @@ const Home = (props) => {
                                         <td className={classes.td} >${courses.cost}</td>
                                         <td className={classes.td} >{courses.duration} months</td>
                                     </tr>
-
-
                                 )
                             })
                             : "Loading..."
@@ -99,7 +99,6 @@ const Home = (props) => {
                     </div>
             </div>
           </body>
-
   );
 }
 export default Home
