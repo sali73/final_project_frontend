@@ -1,11 +1,9 @@
 import React from "react";
-import '../App.css'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from "@material-ui/core"
-
 const useStyles = makeStyles({
   body: {
-      padding: '0px 160px 40px 60px'
+      padding: '0px 100px 40px 80px'
   },
    flexText: {
        margin: '60px 20px',
@@ -37,7 +35,7 @@ const useStyles = makeStyles({
         fontSize: '2.8em',
         marginBottom: '60px',
         fontFamily: 'Lato',
-        paddingTop:'70px'
+        paddingTop:'-20px'
      },
 });
 const Home = (props) => {
@@ -91,6 +89,8 @@ const Home = (props) => {
                                         <td className={classes.td} >${courses.cost}</td>
                                         <td className={classes.td} >{courses.duration} months</td>
                                     </tr>
+
+
                                 )
                             })
                             : "Loading..."
@@ -99,6 +99,7 @@ const Home = (props) => {
                     </div>
             </div>
           </body>
+
   );
 }
 export default Home
