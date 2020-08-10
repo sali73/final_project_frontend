@@ -43,16 +43,16 @@ export default function BasicExample() {
             </main>
             <footer>
             </footer>
-          </body>
-            <Router>
+          </body >
+            <Router >
               <div style={{display: 'flex'}}>
-                <Drawer
+                <Drawer 
                   style={{ width: '13%' }}
                   variant='persistent'
                   anchor='left'
                   open={true}
                   classes={{ paper: classes.drawerPaper }} 
-                  className='leftside'>
+                  >
                     <List>
                       <Link to="/" className={classes.link}>
                       <ListItem button>

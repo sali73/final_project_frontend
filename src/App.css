@@ -23,12 +23,13 @@ nav {
 }
 main{
     grid-area:main;
+    
 }
 footer{
     grid-area:foot;
     
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 676px) {
     .about{
         color: chartreuse;
         text-align: left;
@@ -43,11 +44,14 @@ footer{
     .foot{
         padding-left: 230px;
     }
-   #header, #home{
+   #header{
        text-align: left;
        margin-top: -180px;
        padding-left: 140px;
        font-size: xx-large;
+   }
+   #home{
+    padding-left: 140px;
    }
    #text , #edit {
     text-align: left;
@@ -86,6 +90,13 @@ footer{
     #table{
         width: 20%;
         margin-left: 90px;
+    }
+    main{
+        width: 500px;
+    }
+    .blackBox{
+        width: -500px;
+        background-color: yellow;
     }
  
  
