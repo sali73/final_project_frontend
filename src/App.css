@@ -19,7 +19,7 @@ nav {
     background-image: url(https://www.cuny.edu/wp-content/uploads/sites/4/page-assets/admissions/undergraduate-admissions/explore/brooklyn-college-banner.jpg);
     background-repeat: no-repeat;
     /*opacity: .8;*/
-    background-size: 100%;
+    background-size: 100vh;
 }
 main{
     grid-area:main;
@@ -29,6 +29,9 @@ footer{
     
 }
 @media only screen and (max-width: 600px) {
+    nav{
+        background-size: 700px;
+    }
     .about{
         color: chartreuse;
         text-align: left;

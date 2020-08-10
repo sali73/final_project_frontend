@@ -5,7 +5,7 @@ import { Typography } from "@material-ui/core"
 
 const useStyles = makeStyles({
   body: {
-      padding: '0px 100px 40px 80px'
+      padding: '0px 160px 40px 60px'
   },
    flexText: {
        margin: '60px 20px',
