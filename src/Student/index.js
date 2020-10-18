@@ -19,15 +19,21 @@ const useStyles = makeStyles({
     textAlign:'center',
     textShadow: '2px 2px',
     fontSize: '2.8em',
-    marginBottom: '40px',
+    marginBottom: '10px',
     fontFamily: 'Lato',
-    paddingTop:'70px'
+    paddingTop:'40px'
   },
   formHeader:{
     color: '#3F442C' ,
     paddingTop:'60px',
     textAlign:'center',
     fontFamily: 'Lato',
+  },
+  search:{
+    fontFamily: 'Lato',
+    textAlign:'center',
+    margin:"auto",
+    marginTop:"30px"
   },
   root: {
     maxWidth: 770,
@@ -54,7 +60,8 @@ const Student = (props) => {
   const classes = useStyles()
   // State to hold the Student
   const [student, setStudent] = React.useState(null);
-  // const [attendance, setAttendance] = React.useState(null);
+  const [key_word, setKey_word] = React.useState(' ');
+
   // State to hold the Student the user wants to edit
   const [editStudent, setEditStudent] = React.useState({
     first_name:'',
@@ -120,6 +127,15 @@ const Student = (props) => {
     // Update list of Student
     getInfo();
   };
+  const searchHandler = event => {
+    setKey_word(event.target.value) ;
+    console.log(setKey_word)
+}
+  const searchStudents = (keyWord) => {
+    return x=>{
+        return x.first_name.includes(keyWord)
+    }
+}
   return (
     <div className={classes.body}>
       <div>
@@ -133,11 +149,17 @@ const Student = (props) => {
       <article>
         <Typography className={classes.formHeader} variant="h5" id='edit'>Edit for currently student</Typography>
         <Form  initial={editStudent} handleSubmit={handleEdit} />
-        </article>
+      </article>
+        <div className={classes.search}>
+          <form >
+            <Typography variant="h5" id='search' style={{color:'red'}}>Search:</Typography>
+            <input className="form-control form-control-lg" type="text"  onChange={searchHandler} placeholder="Search by name..." value={key_word}/>
+          </form>
+        </div>
       <main >
         <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', fontSize:'30px' ,paddingTop:'60px',fontWeight:'bolder'}} id='student' > Currently Student List </h1>
         <div className={classes.allCards}>
-          {student ? student.objects.map((person) => {
+          {student ? student.objects.filter(searchStudents(key_word)).map((person) => {
               return (
                   <Card className={classes.root} id='cards'>
                     <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' id='photoCard'/></CardMedia>
