@@ -127,15 +127,15 @@ const Student = (props) => {
     // Update list of Student
     getInfo();
   };
-  const searchHandler = event => {
-    setKey_word(event.target.value) ;
-    console.log(setKey_word)
-}
-  const searchStudents = (keyWord) => {
-    return x=>{
-        return x.first_name.includes(keyWord)
-    }
-}
+//   const searchHandler = event => {
+//     setKey_word(event.target.value) ;
+//     console.log(setKey_word)
+// }
+//   const searchStudents = (keyWord) => {
+//     return x=>{
+//         return x.first_name.includes(keyWord)
+//     }
+// }
   return (
     <div className={classes.body}>
       <div>
@@ -150,16 +150,17 @@ const Student = (props) => {
         <Typography className={classes.formHeader} variant="h5" id='edit'>Edit for currently student</Typography>
         <Form  initial={editStudent} handleSubmit={handleEdit} />
       </article>
-        <div className={classes.search}>
-          <form >
-            <Typography variant="h5" id='search' style={{color:'red'}}>Search:</Typography>
-            <input className="form-control form-control-lg" type="text"  onChange={searchHandler} placeholder="Search by name..." value={key_word}/>
-          </form>
-        </div>
+        {/*<div className={classes.search}>*/}
+        {/*  <form >*/}
+        {/*    <Typography variant="h5" id='search' style={{color:'red'}}>Search:</Typography>*/}
+        {/*    <input className="form-control form-control-lg" type="text"  onChange={searchHandler} placeholder="Search by name..." value={key_word}/>*/}
+        {/*  </form>*/}
+        {/*</div>*/}
       <main >
         <h1 style={{ color:'red',textDecoration: 'underline', textAlign:'center', fontSize:'30px' ,paddingTop:'60px',fontWeight:'bolder'}} id='student' > Currently Student List </h1>
         <div className={classes.allCards}>
-          {student ? student.objects.filter(searchStudents(key_word)).map((person) => {
+           {/*{student ? student.objects.filter(searchStudents(key_word)).map((person) => {*/}
+          {student ? student.objects.map((person) => {
               return (
                   <Card className={classes.root} id='cards'>
                     <CardMedia title="Contemplative Reptile"><img className={classes.media} src={person.profile_pic} alt='pic' id='photoCard'/></CardMedia>
