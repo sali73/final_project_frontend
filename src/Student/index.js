@@ -60,7 +60,7 @@ const Student = (props) => {
   const classes = useStyles()
   // State to hold the Student
   const [student, setStudent] = React.useState(null);
-  const [key_word, setKey_word] = React.useState(' ');
+  // const [key_word, setKey_word] = React.useState(' ');
 
   // State to hold the Student the user wants to edit
   const [editStudent, setEditStudent] = React.useState({
